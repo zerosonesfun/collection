@@ -1,0 +1,70 @@
+{
+    "name": "zerosonesfun/collection",
+    "description": "A slider BBCode. [slider one=text two=text three=text]",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Billy Wilcosky",
+            "email": "billy@wilcosky.com",
+            "role": "Creator"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/zerosonesfun/collection/issues",
+        "source": "https://github.com/zerosonesfun/collection",
+        "forum": "https://discuss.flarum.org"
+    },
+    "homepage": "https://www.wilcosky.com",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://www.wilcosky.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ZerosOnesFun\\Collection\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ZerosOnesFun\\Collection\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Collection",
+            "category": "features",
+            "icon": {
+                "name": "fas fa-layer-group",
+                "backgroundColor": "#ddd",
+                "color": "#000"
+            }
+        }
+    },
+    "scripts": {
+        "test": [
+            "@test:unit",
+            "@test:integration"
+        ],
+        "test:unit": "phpunit -c tests/phpunit.unit.xml",
+        "test:integration": "phpunit -c tests/phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php"
+    },
+    "scripts-descriptions": {
+        "test": "Runs all tests.",
+        "test:unit": "Runs all unit tests.",
+        "test:integration": "Runs all integration tests.",
+        "test:setup": "Sets up a database for use with integration tests. Execute this only once."
+    }
+}
