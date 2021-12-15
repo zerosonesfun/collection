@@ -91,7 +91,7 @@ module.exports =
 /*!******************!*\
   !*** ./forum.js ***!
   \******************/
-/*! no static exports found */
+/*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -136,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
     if (!isDown) return;
     e.preventDefault();
     var x = e.pageX - slider.offsetLeft;
-    var walk = (x - startX) * 5; //scroll-sensitivity/speed
+    var walk = (x - startX) * 3; //scroll-sensitivity/speed
 
     slider.scrollLeft = scrollLeft - walk;
   });

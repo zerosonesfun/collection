@@ -25,7 +25,7 @@ export default function () {
       if(!isDown) return;
       e.preventDefault();
       const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 5; //scroll-sensitivity/speed
+      const walk = (x - startX) * 3; //scroll-sensitivity/speed
       slider.scrollLeft = scrollLeft - walk;
     });
 
