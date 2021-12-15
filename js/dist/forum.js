@@ -115,6 +115,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var slider = document.querySelector('.slides');
+  if (slider === null) return;
   var isDown = false;
   var startX;
   var scrollLeft;
@@ -142,6 +143,7 @@ __webpack_require__.r(__webpack_exports__);
   });
   document.addEventListener('mouseup', function (e) {
     var container = document.getElementById('si');
+    if (container === null) return;
 
     if (!container.contains(e.target)) {
       container.style.visibility = 'hidden';

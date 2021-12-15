@@ -3,6 +3,7 @@ import app from 'flarum/forum/app';
 export default function () {
 
     const slider = document.querySelector('.slides');
+    if (slider === null) return;
     let isDown = false;
     let startX;
     let scrollLeft;
@@ -30,7 +31,8 @@ export default function () {
     });
 
     document.addEventListener('mouseup', function(e) {
-        var container = document.getElementById('si');
+        let container = document.getElementById('si');
+        if (container === null) return;
         if (!container.contains(e.target)) {
             container.style.visibility = 'hidden';
         }
